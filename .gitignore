@@ -1,0 +1,7 @@
+.babelrc
+
+# Node module files
+node_modules/
+
+# Dist file built 
+dist/
