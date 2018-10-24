@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { addBlogPost, removeBlogPost } from "../actions/actions";
 import BlogPostsList from "../components/BlogList";
 
 const mapStateToProps = state => ({
@@ -6,11 +7,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addBlogPost: () => dispatch(addBlogPost()),
-  removeBlogPost: () => dispatch(removeBlogPost())
+  addBlogPost: () => dispatch(addBlogPost(input.payload)),
+  removeBlogPost: () => dispatch(removeBlogPost(input.payload))
 });
 
-connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(BlogPostsList);

@@ -1,5 +1,4 @@
-import ADD_BLOG_POST from "../actions";
-import REMOVE_BLOG_POST from "../actions";
+import { ADD_BLOG_POST, REMOVE_BLOG_POST } from "../actions/actions";
 
 const initialState = {
   blogs: [
@@ -22,19 +21,22 @@ const initialState = {
 };
 
 const blogPostReducer = (state = initialState, action) => {
+  let blogs;
   switch (action.type) {
     case ADD_BLOG_POST:
-      let { blogs } = state;
+      blogs = state.blogs;
       blogs = blogs.concat(payload);
-      return { ...initialState, blogs };
+      return { ...state, blogs };
 
     case REMOVE_BLOG_POST:
       const { id } = payload;
-      let { blogs } = state;
+      blogs = state.blogs;
       blogs = blogs.filter(blogPost => blogPost.id !== id);
-      return { ...initialState, blogs };
+      return { ...state, blogs };
 
     default:
       return state;
   }
 };
+
+export default blogPostReducer;
