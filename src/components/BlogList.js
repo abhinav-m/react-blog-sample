@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import BlogPost from "./BlogPost";
+import BlogPostCard from "./BlogPostCard";
 
 class BlogPostsList extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class BlogPostsList extends Component {
     return (
       <div className="blog-post-list">
         {this.props.blogPosts.map(blogPost => (
-          <BlogPost data={blogPost} removeBlogPost={removeBlogPost} />
+          <BlogPostCard data={blogPost} removeBlogPost={removeBlogPost} />
         ))}
       </div>
     );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const BlogPost = props => (
+const BlogPostCard = props => (
   <div className="blog-post-card">
     {props.data.title}
     <Link to={`/blog/${props.data.id}`}>Read more...</Link>
@@ -9,4 +9,4 @@ const BlogPost = props => (
   </div>
 );
 
-export default Blogpost;
+export default BlogPostCard;

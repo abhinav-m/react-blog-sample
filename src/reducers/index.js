@@ -2,7 +2,23 @@ import ADD_BLOG_POST from "../actions";
 import REMOVE_BLOG_POST from "../actions";
 
 const initialState = {
-  blogs: []
+  blogs: [
+    {
+      id: 0,
+      title: "First blog post",
+      content: "Content of first blog post."
+    },
+    {
+      id: 1,
+      title: "Second blog post",
+      content: "Content of second blog post."
+    },
+    {
+      id: 2,
+      title: "Third blog post",
+      content: "Content of third blog post."
+    }
+  ]
 };
 
 const blogPostReducer = (state = initialState, action) => {
