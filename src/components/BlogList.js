@@ -10,8 +10,11 @@ class BlogPostsList extends Component {
   render() {
     return (
       <div className="blog-post-list">
-        {this.props.blogPosts.map(blogPost => (
-          <BlogPostCard data={blogPost} removeBlogPost={removeBlogPost} />
+        {this.props.blogsData.map(blogPost => (
+          <BlogPostCard
+            data={blogPost}
+            removeBlogPost={this.props.removeBlogPost}
+          />
         ))}
       </div>
     );
